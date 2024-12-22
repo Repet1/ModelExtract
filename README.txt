@@ -1,0 +1,10 @@
+1 选择功耗曲线
+2 选择输入
+3 MLP结构反演用的LSTM（但是没有完全实现），参照https://ww2.mathworks.cn/help/deeplearning/ug/waveform-segmentation-using-deep-learning.html
+也可以直接通过波形来看。
+4 参数反演，使用的不是w*in的汉明重量，而是w*in+sum的，需要知道上一个的权重的真实值才可以算出下一个sum的正确值，进而反演下一个权重，
+这种方法优点是可以避免w*in的不同w产生相同汉明重量而导致的无法分辨哪个是正确w的问题。
+
+功耗曲线选择的文件夹：F:\项目\MLP\BMLP
+输入的文件：F:\项目\MLP\BMLP\权重和输入\random_data.txt
+参数反演的文件：F:\项目\MLP\BMLP\权重和输入\PowerTrace_1_64_5_v1.mat
